@@ -25,10 +25,11 @@ padding: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 0px 3
 }
 
 .header-item-sm {
-  width: 15%;
+  width: 20%;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -36,7 +37,7 @@ padding: 0;
 }
 
 .header-item-big {
-  width: 70%;
+  width: 60%;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -313,6 +314,7 @@ align-items:center;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow-y: auto;
       }
 
       .table-row {
@@ -348,14 +350,56 @@ align-items:center;
       .view {
         width: 150px;
         height: 38px;
-        background: none;
+        background-color: #008CDD;
         border: none;
-        font-size: 16px;
-        color: #008CDD;
+        font-size: 14px;
+        color: #FFFFFF;
         right: 20px;
         bottom: 20px;
+        margin: 0px 15px;
+        border-radius: 10px;
+
 
       }
+
+      .overlay {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        position: absolute;
+        left: 23%;
+        bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;;
+        color:  #008CDD;
+        font-family: 'Proxima Nova', sans-serif;
+      font-size: 22px;
+        transition: 0.45s;
+        opacity:1;
+        
+      }
+
+      .no-overlay {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;;
+        color:  #008CDD;
+        font-family: 'Proxima Nova', sans-serif;
+        opacity: 0;
+          font-size: 22px;
+        transition: 0.45s
+        
+      }
+
 
 
   

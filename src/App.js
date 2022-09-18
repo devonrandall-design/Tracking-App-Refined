@@ -47,6 +47,7 @@ const [another, setAnother] = useState(false)
 const [repCount, setRepCount] = useState(0)
 const [workoutLog, addLog] = useState([])
 const [modal, noModal] = useState('modal')
+const [overlay, setOverlay] = useState('no-overlay')
 
 
 
@@ -83,6 +84,12 @@ function subtractReps () {
 function Logging() {
   const LogSet = new WorkoutLog('Bench Press', 'Set', weight, repCount)
   addLog([...workoutLog, LogSet])
+  
+  setOverlay('overlay');
+
+  setTimeout(() => {
+    setOverlay('no-overlay')
+  }, 1500)
  
   console.log(workoutLog)
   
@@ -94,7 +101,7 @@ const onBar = []
 
   return (
     <div className="app-container">
-      <Header />
+      <Header modal={modal} noModal={noModal} />
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
       <Barbell />
@@ -122,7 +129,9 @@ const onBar = []
             <Modal changeModal={noModal} modal={modal}>
 <Log currentLog={workoutLog} />
               </Modal>
-            <button className="view" onClick={() => noModal(modal === 'modal' ? 'modal-show' : 'modal')}><u>View Workout Log</u></button>
+            <div className={overlay}>
+              Set Logged!
+              </div>
 
       
     </div>
