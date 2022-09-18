@@ -45,6 +45,7 @@ const [name, setName] = useState('plate')
 const [another, setAnother] = useState(false)
 const [repCount, setRepCount] = useState(0)
 const [workoutLog, addLog] = useState([])
+const [modal, noModal] = useState('modal')
 
 
 
@@ -119,7 +120,8 @@ const onBar = []
             {workoutLog.map(logs => {return <p>{logs._name}</p>})}
             </div>
 
-            <Modal />
+            <Modal changeModal={noModal} modal={modal} />
+            <button onClick={() => noModal(modal === 'modal' ? 'modal-show' : 'modal')}>HELP</button>
 
       
     </div>
