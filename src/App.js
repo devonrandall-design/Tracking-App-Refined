@@ -97,7 +97,7 @@ const onBar = []
       <p className="label-sm">lbs</p>
       <Barbell />
       <PlateArea>
-{weightArray.map(weight => {return <Plate current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
+{weightArray.map(weight => {return <Plate key={weight} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
         <div className="btn-Area">
           <Buttons weight={weight} selected={selected} addWeight={addWeight}
