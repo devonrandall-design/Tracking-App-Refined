@@ -363,7 +363,46 @@ align-items:center;
 
       }
 
-      
+      .overlay {
+        width: 100px;
+        height: 70px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        position: absolute;
+        left: 23%;
+        bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;;
+        color:  #008CDD;
+        font-family: 'Proxima Nova', sans-serif;
+      font-size: 22px;
+        transition: 0.45s;
+        -webkit-transition: 0.45s;
+        opacity:1;
+        
+      }
+
+      .no-overlay {
+        width: 100px;
+        height: 70px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;;
+        color:  #008CDD;
+        font-family: 'Proxima Nova', sans-serif;
+        opacity: 0;
+          font-size: 22px;
+        transition: 0.45s;
+        -webkit-transition: 0.45s;
+        
+      }
+
 
 
   
