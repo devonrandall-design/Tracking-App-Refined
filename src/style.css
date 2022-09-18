@@ -378,6 +378,7 @@ align-items:center;
         font-family: 'Proxima Nova', sans-serif;
       font-size: 22px;
         transition: 0.45s;
+        -webkit-transition: 0.45s;
         opacity:1;
         
       }
@@ -397,7 +398,8 @@ align-items:center;
         font-family: 'Proxima Nova', sans-serif;
         opacity: 0;
           font-size: 22px;
-        transition: 0.45s
+        transition: 0.45s;
+        -webkit-transition: 0.45s;
         
       }
 
