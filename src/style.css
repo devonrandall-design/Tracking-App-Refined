@@ -331,8 +331,9 @@ align-items:center;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 0.5px solid #6F7C82;
         border-collapse: collapse;
+        margin: 5px;
+        padding: 5px;
       }
 
       .list-item {
