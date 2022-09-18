@@ -122,7 +122,7 @@ const onBar = []
           <button onClick={() => addReps()} className="activeround">+</button>
           </div>
         <div className="log-set-container">
-        <div onClick={repCount > 0 ? () => Logging() : null} className={repCount < 1 ? 'inactive' : 'btn'}>Log Set</div>
+        <button onClick={repCount > 0 ? () => Logging() : null} className={repCount < 1 ? 'inactive' : 'btn'}>Log Set</button>
           </div>
          
 
