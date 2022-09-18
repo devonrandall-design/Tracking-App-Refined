@@ -13,12 +13,11 @@ const weightArray = [5, 10, 25, 35, 45]
 const [weight, setWeight] = useState(45)
 const [selected, setSelected] = useState(0)
 const [name, setName] = useState('plate')
-const [another, setAnother] = useState(true)
+const [another, setAnother] = useState(false)
 
 function selectWeight(plate) {
-setName('selected-plate')
   setSelected(plate * 2)
-} 
+}
 
 function addWeight (entry) {
   setWeight(weight + entry)
@@ -26,6 +25,10 @@ function addWeight (entry) {
 
 function subtractWeight (entry) {
   setWeight(weight - entry)
+  if (weight - entry < 45) {
+    setWeight(45)
+    return
+  }
 }
 
 
@@ -39,7 +42,7 @@ const onBar = []
       <p className="label-sm">lbs</p>
       <Barbell />
       <PlateArea>
-{weightArray.map(weight => {return <Plate selectedName={name} selectWeight={selectWeight} amount={weight} />})}
+{weightArray.map(weight => {return <Plate current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
         <div className="btn-Area">
           <Buttons selected={selected} addWeight={addWeight}
