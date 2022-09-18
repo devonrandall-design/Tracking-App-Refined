@@ -249,5 +249,18 @@ align-items:center;
       gap: 35px;
       margin-top: 20px;
       }
+
+      .modal {
+        width: 100vw;
+        height: 60vh;
+        background-color: #1E2124;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        
+      }
   
 

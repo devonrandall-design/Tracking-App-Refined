@@ -5,6 +5,7 @@ import Barbell from './barbell-area.js'
 import PlateArea from './plate-area.js'
 import Plate from './plates.js'
 import Buttons from './buttons.js'
+import Modal from './modal.js'
 
 export default function App() {
 
@@ -117,6 +118,9 @@ const onBar = []
           <div>
             {workoutLog.map(logs => {return <p>{logs._name}</p>})}
             </div>
+
+            <Modal />
+
       
     </div>
   );
