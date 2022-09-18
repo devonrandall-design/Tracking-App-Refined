@@ -28,7 +28,7 @@ get weight() {
   return this.weight;
 }
 
-get weight() {
+get reps() {
   return this.reps;
 }
 
@@ -43,9 +43,10 @@ const [selected, setSelected] = useState(0)
 const [name, setName] = useState('plate')
 const [another, setAnother] = useState(false)
 const [repCount, setRepCount] = useState(0)
+const [workoutLog, addLog] = useState([])
 
 
-let currentWorkoutLog = []
+
 
 function selectWeight(plate) {
   setSelected(plate * 2)
@@ -74,8 +75,9 @@ function subtractReps () {
 
 function Logging() {
   const LogSet = new WorkoutLog('Bench Press', 'Set', weight, repCount)
-  currentWorkoutLog.push(LogSet)
-  console.log(currentWorkoutLog)
+  addLog([...workoutLog, LogSet])
+ 
+  console.log(workoutLog)
   
   }
 
@@ -108,6 +110,9 @@ const onBar = []
         <div className="log-set-container">
         <div onClick={repCount > 0 ? () => Logging() : null} className={repCount < 1 ? 'inactive' : 'btn'}>Log Set</div>
           </div>
+          <div>
+            {workoutLog.map(logs => {return <p>{logs._name}</p>})}
+            </div>
       
     </div>
   );
