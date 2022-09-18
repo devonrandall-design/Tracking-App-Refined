@@ -48,6 +48,7 @@ const [repCount, setRepCount] = useState(0)
 const [workoutLog, addLog] = useState([])
 const [modal, noModal] = useState('modal')
 const [overlay, setOverlay] = useState('no-overlay')
+const [exerciseName, setExerciseName] = useState('Enter Name')
 
 
 
@@ -82,7 +83,7 @@ function subtractReps () {
 }
 
 function Logging() {
-  const LogSet = new WorkoutLog('Bench Press', 'Set', weight, repCount)
+  const LogSet = new WorkoutLog(exerciseName, 'Set', weight, repCount)
   addLog([...workoutLog, LogSet])
   
   setOverlay('overlay');
@@ -101,7 +102,7 @@ const onBar = []
 
   return (
     <div className="app-container">
-      <Header modal={modal} noModal={noModal} />
+      <Header changeName={setExerciseName} exerciseName={exerciseName} modal={modal} noModal={noModal} />
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
       <Barbell />

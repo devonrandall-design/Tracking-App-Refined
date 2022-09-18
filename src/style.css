@@ -25,7 +25,10 @@ padding: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0px 3
+  align-self: center;
+  margin: 0px;
+  background-color:#1E2124;
+  height: 5rem;
 }
 
 .header-item-sm {
@@ -58,7 +61,7 @@ padding: 0;
   align-items: center;
   justify-content: center;
   font-family: 'Proxima Nova', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   color: #008CDD;
 }
 
