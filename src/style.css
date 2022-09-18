@@ -172,7 +172,7 @@ align-items:center;
     display: flex;
     justify-content: center;
     align-items:center;
-    gap: 20px;
+    gap: 35px;
     }
 
     .activeround {
@@ -196,7 +196,6 @@ align-items:center;
       border: none;
       background-color: #6F7C82;
       color: #23272A;
-      color: #FFFFFF;
       font-size: 30px;
       display: flex;
       justify-content: center;
@@ -210,9 +209,9 @@ align-items:center;
       justify-content: center;
     }
 
-    .vertical-stack h2 {
+    .rep-inactive {
       font-family: 'Proxima Nova', sans-serif;
-      font-size: 50px;
+      font-size: 45px;
       padding: 0;
       margin: 0;
       display: block;
@@ -229,4 +228,24 @@ align-items:center;
   
     }
 
+    .rep-active{
+      font-family: 'Proxima Nova', sans-serif;
+      font-size: 45px;
+      padding: 0;
+      margin: 0;
+      display: block;
+      color:#008CDD;
+    }
+
+    .log-set-container {
+      min-height: 80px;
+      width: 80vw;
+      margin: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      gap: 35px;
+      margin-top: 20px;
+      }
+  
 
