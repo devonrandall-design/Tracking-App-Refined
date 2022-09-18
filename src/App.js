@@ -85,12 +85,7 @@ function Logging() {
   const LogSet = new WorkoutLog('Bench Press', 'Set', weight, repCount)
   addLog([...workoutLog, LogSet])
   
-  setOverlay('overlay');
 
-  setTimeout(() => {
-    setOverlay('no-overlay')
-  }, 1500)
- 
   console.log(workoutLog)
   
   }
