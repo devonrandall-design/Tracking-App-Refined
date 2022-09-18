@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Header({noModal}) {
+export default function Header({noModal, modal}) {
 
 return <div className="header">
   <div className="header-item-sm"></div>
