@@ -47,6 +47,21 @@ padding: 0;
 
 }
 
+.header-item-big input {
+  width: 60%;
+  height: 4rem;
+  background: none;
+  border:none;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 30px;
+  color: #008CDD;
+}
+
 .headerAmount {
   font-family: 'Proxima Nova', sans-serif;
   font-size: 72px;
