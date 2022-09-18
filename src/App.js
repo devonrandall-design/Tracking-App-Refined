@@ -45,7 +45,7 @@ const onBar = []
 {weightArray.map(weight => {return <Plate current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
         <div className="btn-Area">
-          <Buttons selected={selected} addWeight={addWeight}
+          <Buttons weight={weight} selected={selected} addWeight={addWeight}
           subtractWeight={subtractWeight} />
 
         </div>
