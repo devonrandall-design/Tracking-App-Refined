@@ -6,6 +6,7 @@ import PlateArea from './plate-area.js'
 import Plate from './plates.js'
 import Buttons from './buttons.js'
 import Modal from './modal.js'
+import Log from './log-area.js'
 
 export default function App() {
 
@@ -116,12 +117,12 @@ const onBar = []
         <div className="log-set-container">
         <div onClick={repCount > 0 ? () => Logging() : null} className={repCount < 1 ? 'inactive' : 'btn'}>Log Set</div>
           </div>
-          <div>
-            {workoutLog.map(logs => {return <p>{logs._name}</p>})}
-            </div>
+         
 
-            <Modal changeModal={noModal} modal={modal} />
-            <button onClick={() => noModal(modal === 'modal' ? 'modal-show' : 'modal')}>HELP</button>
+            <Modal changeModal={noModal} modal={modal}>
+<Log currentLog={workoutLog} />
+              </Modal>
+            <button className="view" onClick={() => noModal(modal === 'modal' ? 'modal-show' : 'modal')}><u>View Workout Log</u></button>
 
       
     </div>
