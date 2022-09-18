@@ -14,6 +14,7 @@ const [weight, setWeight] = useState(45)
 const [selected, setSelected] = useState(0)
 const [name, setName] = useState('plate')
 const [another, setAnother] = useState(false)
+const [repCount, setRepCount] = useState(0)
 
 function selectWeight(plate) {
   setSelected(plate * 2)
@@ -29,6 +30,15 @@ function subtractWeight (entry) {
     setWeight(45)
     return
   }
+}
+
+function addReps () {
+  setRepCount(repCount + 1)
+}
+
+function subtractReps () {
+  if (repCount > 0)
+  setRepCount(repCount - 1)
 }
 
 
@@ -49,6 +59,14 @@ const onBar = []
           subtractWeight={subtractWeight} />
 
         </div>
+        <div className="rep-Area">
+          <button onClick={() => subtractReps()} className={repCount === 0 ? 'inactiveRound' : 'activeround'}>-</button>
+          <div className="vertical-stack">
+          <h2>{repCount}</h2>
+          <p>reps</p>
+          </div>
+          <button onClick={() => addReps()} className="activeround">+</button>
+          </div>
       
     </div>
   );

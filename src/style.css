@@ -82,19 +82,19 @@ align-items:center;
 
 .plateArea {
   min-height: 125px;
-  width: 80vw;
+  width: 90vw;
   margin: 0px 20px;
   display: flex;
   justify-content: center;
   align-items:center;
-  gap: 8px;
+  gap: 15px;
   }
 
   .plate {
-    width: 68px;
-    height: 68px;
+    width: 60px;
+    height: 60px;
     border: 2px solid #008CDD;
-    border-radius: 50px;
+    border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,10 +106,10 @@ align-items:center;
   }
 
   .selected-plate {
-    width: 68px;
-    height: 68px;
+    width: 65px;
+    height: 65px;
     background-color: #008CDD;
-    border-radius: 50px;
+    border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,7 +140,7 @@ align-items:center;
       height: 44px;
       border: 2px solid #008CDD;
       border-radius: 5px;
-      font-family: 13px;
+      font-size: 15px;
       color: #FFFFFF;
       font-family: 'Proxima Nova', sans-serif;
       display: flex;
@@ -155,7 +155,7 @@ align-items:center;
       height: 44px;
       background-color: #6F7C82;
       border-radius: 5px;
-      font-family: 13px;
+      font-size: 15px;
       color: #23272A;
       font-family: 'Proxima Nova', sans-serif;
       display: flex;
@@ -163,4 +163,70 @@ align-items:center;
       justify-content: center;
 
     }
+
+
+  .rep-Area {
+    min-height: 80px;
+    width: 80vw;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+    }
+
+    .activeround {
+      width: 50px;
+      height: 50px;
+      border-radius: 60px;
+      border: none;
+      background-color: #008CDD;
+      color: #FFFFFF;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+  .inactiveRound{
+      width: 50px;
+      height: 50px;
+      border-radius: 60px;
+      border: none;
+      background-color: #6F7C82;
+      color: #23272A;
+      color: #FFFFFF;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .vertical-stack {
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+    }
+
+    .vertical-stack h2 {
+      font-family: 'Proxima Nova', sans-serif;
+      font-size: 50px;
+      padding: 0;
+      margin: 0;
+      display: block;
+      color:#6F7C82;
+    }
+
+    .vertical-stack p {
+      font-family: 'Proxima Nova', sans-serif;
+      font-size: 16px;
+      padding: 0px;
+      margin: -10px;
+      display: block;
+      color: #6F7C82;
+  
+    }
+
 
