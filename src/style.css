@@ -310,10 +310,10 @@ align-items:center;
 
       .log-area {
         display: flex;
-        min-width: 475px;
+        max-width: 400px;
+        min-width: 300px;
         min-height: 400px;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         overflow-y: auto;
       }
