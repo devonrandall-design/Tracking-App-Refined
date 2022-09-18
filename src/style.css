@@ -147,6 +147,7 @@ align-items:center;
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
+      user-select: none;
 
     }
 
@@ -161,6 +162,7 @@ align-items:center;
       display: flex;
       align-items: center;
       justify-content: center;
+      user-select: none;
 
     }
 

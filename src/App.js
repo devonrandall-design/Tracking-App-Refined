@@ -54,6 +54,10 @@ function selectWeight(plate) {
 
 function addWeight (entry) {
   setWeight(weight + entry)
+  if (weight + entry > 1300) {
+    setWeight(1300) 
+    return
+  }
 }
 
 function subtractWeight (entry) {
