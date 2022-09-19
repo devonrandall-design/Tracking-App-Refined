@@ -82,10 +82,13 @@ function addWeight (entry) {
 
 function subtractWeight (entry) {
 
-const minusLeft = () => {
-  LeftBar.filter
-}
+const leftIndex = LeftBar.findIndex(plate => plate === entry / 2)
+setLeftBar(LeftBar.splice(leftIndex, 1))
 
+const rightIndex = RightBar.findIndex(plate => plate === entry / 2)
+setRightBar(RightBar.splice(rightIndex, 1))
+
+console.log(LeftBar, RightBar)
 
   setWeight(weight - entry)
   if (weight - entry < 45) {
