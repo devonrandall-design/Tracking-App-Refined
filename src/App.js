@@ -55,12 +55,23 @@ const [exerciseName, setExerciseName] = useState('Enter Name')
 const [newSet, setSet] = useState(1)
 
 
+//Bar States for Animation
+const [LeftBar, setLeftBar] = useState([])
+const [RightBar, setRightBar] = useState([])
 
+//Changing Selected Weight Value
 function selectWeight(plate) {
   setSelected(plate * 2)
 }
 
+//Adding and Subtracting Weight
+
 function addWeight (entry) {
+
+  setLeftBar([...LeftBar, (entry / 2)])
+  setRightBar([...RightBar, (entry / 2)])
+  console.log(LeftBar, RightBar)
+
   setWeight(weight + entry)
   if (weight + entry > 1300) {
     setWeight(1300) 
@@ -75,6 +86,8 @@ function subtractWeight (entry) {
     return
   }
 }
+
+//Adding and Subtracting Reps
 
 function addReps () {
   setRepCount(repCount + 1)
@@ -107,7 +120,6 @@ function Logging() {
   
 
 
-const onBar = []
 
 
   return (
@@ -128,9 +140,13 @@ const onBar = []
 {weightArray.map(weight => {return <Plate key={weight} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
         <div className="btn-Area">
-          <Buttons weight={weight} selected={selected} addWeight={addWeight}
+          <Buttons 
+          leftbar={LeftBar}
+          rightbar={RightBar}
+          addleft={setLeftBar}
+          addright={setRightBar} 
+          weight={weight} selected={selected} addWeight={addWeight}
           subtractWeight={subtractWeight} />
-
         </div>
         <div className="rep-Area">
           <button onClick={() => subtractReps()} className={repCount === 0 ? 'inactiveRound' : 'activeround'}>-</button>

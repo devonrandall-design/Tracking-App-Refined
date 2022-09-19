@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Buttons({selected, addWeight, subtractWeight, weight}) {
+export default function Buttons({selected, addWeight, subtractWeight, weight, leftbar, rightbar, addleft, addright}) {
 
   return (
   <>
