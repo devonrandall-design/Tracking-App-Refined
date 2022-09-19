@@ -81,7 +81,7 @@ body {
 }
 
 .label-sm {
-  margin: 0px;
+  margin: -15px;
   padding: 0px;
   font-size: 16px;
   font-family: 'Proxima Nova', sans-serif;
