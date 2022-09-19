@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import "./style.css";
 import Header from './header'
 import Barbell from './barbell-area.js'
@@ -11,7 +10,6 @@ import Log from './log-area.js'
 
 export default function App() {
 
-  const handle = useFullScreenHandle();
 
 class WorkoutLog {
 constructor(name, set, weight, reps) {
@@ -141,7 +139,6 @@ function Logging() {
 
 
   return (
-    <FullScreen handle={handle}>
     <div className="app-container">
      
       <Header 
@@ -192,6 +189,5 @@ function Logging() {
 
       
     </div>
-    </FullScreen>
   );
 }
