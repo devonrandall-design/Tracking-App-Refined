@@ -7,11 +7,12 @@ p {
 * {
 margin: 0;
 padding: 0;
+height: 100%;
 }
 
 .app-container {
   min-width: 100vw;
-  min-height: 100vh;
+  height: 100%;
   background-color: #292E31;
   margin: auto;
   display: flex;
@@ -141,7 +142,11 @@ align-items:center;
 
   .plate h3, .selected-plate h3 {
     color: #FFFFFF;
-    font-family: 'Proxima Nova', sans-serif
+    font-family: 'Proxima Nova', sans-serif;
+    text-align: center ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
 
@@ -246,12 +251,21 @@ align-items:center;
       font-family: 'Proxima Nova', sans-serif;
       font-size: 16px;
       padding: 0px;
-      margin: -10px;
+      margin: 0px;
       display: block;
       color: #6F7C82;
+      margin: -10px;
   
     }
 
+    .vertical-stack h2 {
+      font-family: 'Proxima Nova', sans-serif;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      margin-top: 12px;
+  
+    }
     .rep-active{
       font-family: 'Proxima Nova', sans-serif;
       font-size: 45px;
