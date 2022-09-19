@@ -1,13 +1,21 @@
 import React from 'react'
 
-export default function Barbell({leftbar, rightbar, weight}) {
+export default function Barbell({leftbar, rightbar, distance, changeDistance}) {
+
+  let y = 60
+
+  /* const styles = { 
+    transform: `translate(${x}px, ${y}px)` 
+}; */
 
   
 
   return <div className="bar-area">
     <div className="bar">
 {
-leftbar.map(bar => { return <div className={`plate-${bar} ` + 'left-plate'}>
+leftbar.map(bar => { 
+  {changeDistance(distance + 10)}
+  return <div style={{transform: `translateX(${distance}px)`}} className={`plate-${bar} ` + 'left-plate'}>
 
 </div>}
 )}

@@ -53,6 +53,7 @@ const [modal, noModal] = useState('modal')
 const [overlay, setOverlay] = useState('no-overlay')
 const [exerciseName, setExerciseName] = useState('Enter Name')
 const [newSet, setSet] = useState(1)
+const [distance, setDistance] = useState(50)
 
 
 //Bar States for Animation
@@ -153,7 +154,10 @@ function Logging() {
       <button onClick={() => test()}>TESTING</button>
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
-      <Barbell weight={weight} leftbar={LeftBar} rightbar={RightBar} />
+      <Barbell 
+      distance={distance}
+      changeDistance={setDistance}
+      weight={weight} leftbar={LeftBar} rightbar={RightBar} />
       <PlateArea>
 {weightArray.map(weight => {return <Plate key={weight} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
