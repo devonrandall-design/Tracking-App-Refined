@@ -284,6 +284,8 @@ align-items:center;
       align-items:center;
       gap: 35px;
       margin-top: 20px;
+      overflow-y: auto;
+      overflow-x: hidden;
       }
 
       .modal {
