@@ -14,7 +14,6 @@ export default function Barbell({leftbar, rightbar, distance, changeDistance}) {
     <div className="bar">
 {
 leftbar.map(bar => { 
-  {changeDistance(distance + 10)}
   return <div className={`plate-${bar} ` + 'left-plate'}>
 
 </div>}
