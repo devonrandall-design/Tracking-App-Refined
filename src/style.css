@@ -108,6 +108,23 @@ align-items:center;
   align-items: center;
 }
 
+.clamp {
+  width: 8px;
+  height: 40px;
+  background-color:#008CDD;
+  border-radius: 2px;
+  position: relative;
+  
+}
+
+.left {
+  transform: translateX(-60px);
+}
+
+.right {
+  transform: translateX(60px);
+}
+
 .plateArea {
   min-height: 125px;
   width: 90vw;
