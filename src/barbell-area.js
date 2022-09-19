@@ -15,7 +15,7 @@ export default function Barbell({leftbar, rightbar, distance, changeDistance}) {
 {
 leftbar.map(bar => { 
   {changeDistance(distance + 10)}
-  return <div style={{transform: `translateX(${distance}px)`}} className={`plate-${bar} ` + 'left-plate'}>
+  return <div className={`plate-${bar} ` + 'left-plate'}>
 
 </div>}
 )}
