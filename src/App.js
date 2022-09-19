@@ -69,7 +69,7 @@ function selectWeight(plate) {
 
 function addWeight (entry) {
   setLeftBar([(entry / 2), ...LeftBar ])
-  setRightBar([...RightBar, (entry / 2)])
+  setRightBar([(entry / 2), ...RightBar, ])
   console.log(LeftBar)
 
 
@@ -85,14 +85,12 @@ function subtractWeight (entry) {
 
   //FIND INDEX 
 const leftIndex = LeftBar.findIndex(plate => plate === (entry / 2))
-console.log(leftIndex)
-const newLeftArray = LeftBar.splice(leftIndex, 1)
-console.log(newLeftArray)
-console.log(LeftBar)
+LeftBar.splice(leftIndex, 1)
 setLeftBar(LeftBar)
 
 const rightIndex = RightBar.findIndex(plate => plate === (entry / 2))
-setRightBar(RightBar.splice(rightIndex, 1))
+RightBar.splice(leftIndex, 1)
+setRightBar(RightBar)
 
 //console.log(LeftBar, RightBar)
 
@@ -133,6 +131,9 @@ function Logging() {
   
   }
 
+  function test() {
+    console.log(LeftBar)
+  }
   
 
 
@@ -149,6 +150,7 @@ function Logging() {
       exerciseName={exerciseName} 
       modal={modal} 
       noModal={noModal} />
+      <button onClick={() => test()}>TESTING</button>
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
       <Barbell weight={weight} leftbar={LeftBar} rightbar={RightBar} />
