@@ -420,16 +420,17 @@ align-items:center;
       }
 
       .view {
-        width: 150px;
+        width: auto;
         height: 38px;
-        background-color: #008CDD;
+        background: none;
         border: none;
         font-size: 14px;
-        color: #FFFFFF;
+        color: #008CDD;
         right: 20px;
         bottom: 20px;
         margin: 0px 15px;
         border-radius: 10px;
+        text-decoration: underline;
 
 
       }
