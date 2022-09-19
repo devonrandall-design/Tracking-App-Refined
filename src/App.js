@@ -68,10 +68,10 @@ function selectWeight(plate) {
 //ALSO SETTING BAR VALUES!!!!!!!!
 
 function addWeight (entry) {
-
-  setLeftBar([...LeftBar, (entry / 2)])
+  setLeftBar([(entry / 2), ...LeftBar ])
   setRightBar([...RightBar, (entry / 2)])
-  console.log(LeftBar, RightBar)
+  console.log(LeftBar)
+
 
   setWeight(weight + entry)
   if (weight + entry > 1300) {
@@ -82,13 +82,19 @@ function addWeight (entry) {
 
 function subtractWeight (entry) {
 
-const leftIndex = LeftBar.findIndex(plate => plate === entry / 2)
-setLeftBar(LeftBar.splice(leftIndex, 1))
 
-const rightIndex = RightBar.findIndex(plate => plate === entry / 2)
+  //FIND INDEX 
+const leftIndex = LeftBar.findIndex(plate => plate === (entry / 2))
+console.log(leftIndex)
+const newLeftArray = LeftBar.splice(leftIndex, 1)
+console.log(newLeftArray)
+console.log(LeftBar)
+setLeftBar(LeftBar)
+
+const rightIndex = RightBar.findIndex(plate => plate === (entry / 2))
 setRightBar(RightBar.splice(rightIndex, 1))
 
-console.log(LeftBar, RightBar)
+//console.log(LeftBar, RightBar)
 
   setWeight(weight - entry)
   if (weight - entry < 45) {
@@ -145,7 +151,7 @@ function Logging() {
       noModal={noModal} />
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
-      <Barbell leftbar={LeftBar} rightbar={RightBar} />
+      <Barbell weight={weight} leftbar={LeftBar} rightbar={RightBar} />
       <PlateArea>
 {weightArray.map(weight => {return <Plate key={weight} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
