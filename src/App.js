@@ -65,6 +65,7 @@ function selectWeight(plate) {
 }
 
 //Adding and Subtracting Weight
+//ALSO SETTING BAR VALUES!!!!!!!!
 
 function addWeight (entry) {
 
@@ -80,6 +81,12 @@ function addWeight (entry) {
 }
 
 function subtractWeight (entry) {
+
+const minusLeft = () => {
+  LeftBar.filter
+}
+
+
   setWeight(weight - entry)
   if (weight - entry < 45) {
     setWeight(45)
@@ -135,7 +142,7 @@ function Logging() {
       noModal={noModal} />
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
-      <Barbell />
+      <Barbell leftbar={LeftBar} rightbar={RightBar} />
       <PlateArea>
 {weightArray.map(weight => {return <Plate key={weight} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
