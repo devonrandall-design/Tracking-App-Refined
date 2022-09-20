@@ -83,7 +83,12 @@ function addWeight (entry) {
 
 function subtractWeight (entry) {
 
-
+const checkingLeft = LeftBar.some(bar => bar === (entry / 2))
+if (!checkingLeft) {
+  console.log(`${entry / 2} is not on the bar`)
+  return
+}
+// console.log(checkingLeft)
   //FIND INDEX 
 const leftIndex = LeftBar.findIndex(plate => plate === (entry / 2))
 LeftBar.splice(leftIndex, 1)
@@ -93,7 +98,6 @@ const rightIndex = RightBar.findIndex(plate => plate === (entry / 2))
 RightBar.splice(leftIndex, 1)
 setRightBar(RightBar)
 
-//console.log(LeftBar, RightBar)
 
   setWeight(weight - entry)
   if (weight - entry < 45) {
