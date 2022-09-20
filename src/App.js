@@ -54,6 +54,7 @@ const [warning, setWarning] = useState('no-warning')
 const [exerciseName, setExerciseName] = useState('Enter Name')
 const [newSet, setSet] = useState(1)
 const [distance, setDistance] = useState(70)
+const [error, setError] = useState('no-error')
 
 
 
@@ -133,7 +134,11 @@ function Logging() {
   setSet((newSet + 1))
   
   setOverlay('overlay');
-  
+  setError('error-state')
+
+  setTimeout(() => {
+    setError('')
+  }, 400)
   
 
   setTimeout(() => {
@@ -165,6 +170,7 @@ function Logging() {
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
       <Barbell 
+      errorstate={error}
       distance={distance}
       changeDistance={setDistance}
       weight={weight} leftbar={LeftBar} rightbar={RightBar} />

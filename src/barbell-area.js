@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 
-export default function Barbell({leftbar, rightbar, distance, changeDistance}) {
+export default function Barbell({leftbar, rightbar, distance, changeDistance, errorstate}) {
 
 const leftCheck = leftbar.length;
 
@@ -8,7 +8,7 @@ const dynamicdistance = [80, 95, 110, 125, 140, 155, 170, 185, 200, 215, 230, 24
 
 
 
-  return <div className="bar-area">
+  return <div className={`bar-area ${errorstate}`}>
     <div className={`${leftbar.length > 0 ? 'risen' : 'bar'}`}>
 {
 leftbar.map((bar, index) => { 
