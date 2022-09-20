@@ -645,6 +645,37 @@ border-radius: 30px;
         transition: ease-in-out;
       }
 
+      .style-45 {
+        width: 20px;
+        height: 135px;
+        position: absolute;
+      }
 
+
+      .style-35 {
+        width: 25px;
+        height: 110px;
+        position: absolute;
+      }
+
+      .style-25 {
+        width: 25px;
+        height: 90px;
+        position: absolute;
+      }
+
+      .style-10 {
+        width: 25px;
+        height: 70px;
+        position: absolute;
+      }
+
+      .style-5 {
+        width: 25px;
+        height: 55px;
+        position: absolute;
+      }
+  
+  
   
 

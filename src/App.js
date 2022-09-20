@@ -8,6 +8,7 @@ import Buttons from './buttons.js'
 import Modal from './modal.js'
 import Log from './log-area.js'
 import Warning from './warning-modal.js'
+import StyledPlate from './plate-image.js'
 
 export default function App() {
 
