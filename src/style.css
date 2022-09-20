@@ -625,18 +625,20 @@ border-radius: 30px;
     
       @keyframes shake {
         0%   {transform: translateX(5px)};
-        20%  {transform: translateX(-5px)};
-        40%  {transform: translateX(5px)};
-        60% {transform: translateX(-5px)};
-        80% {transform: translateX(5px)};
-        100% {transform: translateX(0px)};
+        25%  {transform: translateX(-10px)};
+        50%  {transform: translateX(5px)};
+        75%  {transform: translateX(-10px)};
+        100% {transform: translateX(0px)}
+       
+        
         
       }
 
       .error-state {
         animation-name: shake;
-        animation-duration: 2s ;
+        animation-duration: 100ms ;
         transition: ease-in-out;
+        animation-iteration-count: infinite;
       }
 
       .no-error {

@@ -91,6 +91,12 @@ if (!checkingLeft) {
 
   setWarning('warning')
 
+  setError('error-state')
+
+  setTimeout(() => {
+    setError('')
+  }, 500)
+
   setTimeout(() => {
 setWarning('no-warning')
   }, 2000)
@@ -134,11 +140,7 @@ function Logging() {
   setSet((newSet + 1))
   
   setOverlay('overlay');
-  setError('error-state')
-
-  setTimeout(() => {
-    setError('')
-  }, 400)
+  
   
 
   setTimeout(() => {
