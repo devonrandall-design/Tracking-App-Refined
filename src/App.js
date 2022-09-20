@@ -7,6 +7,7 @@ import Plate from './plates.js'
 import Buttons from './buttons.js'
 import Modal from './modal.js'
 import Log from './log-area.js'
+import Warning from './warning-modal.js'
 
 export default function App() {
 
@@ -49,6 +50,7 @@ const [repCount, setRepCount] = useState(0)
 const [workoutLog, addLog] = useState([])
 const [modal, noModal] = useState('modal')
 const [overlay, setOverlay] = useState('no-overlay')
+const [warning, setWarning] = useState('no-warning')
 const [exerciseName, setExerciseName] = useState('Enter Name')
 const [newSet, setSet] = useState(1)
 const [distance, setDistance] = useState(70)
@@ -85,6 +87,12 @@ function subtractWeight (entry) {
 
 const checkingLeft = LeftBar.some(bar => bar === (entry / 2))
 if (!checkingLeft) {
+
+  setWarning('warning')
+
+  setTimeout(() => {
+setWarning('no-warning')
+  }, 2000)
   console.log(`${entry / 2} is not on the bar`)
   return
 }
@@ -191,6 +199,10 @@ function Logging() {
             <div className={overlay}>
               Set Logged!
               </div>
+
+              <Warning warningClass={warning}>
+                <p>{`There are not any ${selected / 2}lb weights on the bar`}</p>
+                </Warning>
 
       
     </div>
