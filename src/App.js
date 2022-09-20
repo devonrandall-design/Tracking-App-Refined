@@ -150,7 +150,6 @@ function Logging() {
       exerciseName={exerciseName} 
       modal={modal} 
       noModal={noModal} />
-      <button onClick={() => test()}>TESTING</button>
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
       <Barbell 
