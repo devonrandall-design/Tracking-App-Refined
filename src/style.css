@@ -366,7 +366,7 @@ border-radius: 30px;
     }
 
     .log-set-container {
-      min-height: 80px;
+      min-height: 30px;
       width: 80vw;
       margin: 0px 20px;
       display: flex;
