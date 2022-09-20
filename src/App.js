@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./style.css";
 import Header from './header'
 import Barbell from './barbell-area.js'
@@ -51,12 +51,14 @@ const [modal, noModal] = useState('modal')
 const [overlay, setOverlay] = useState('no-overlay')
 const [exerciseName, setExerciseName] = useState('Enter Name')
 const [newSet, setSet] = useState(1)
-const [distance, setDistance] = useState(50)
+const [distance, setDistance] = useState(70)
+
 
 
 //Bar States for Animation
 const [LeftBar, setLeftBar] = useState([])
 const [RightBar, setRightBar] = useState([])
+
 
 //Changing Selected Weight Value
 function selectWeight(plate) {
@@ -67,9 +69,9 @@ function selectWeight(plate) {
 //ALSO SETTING BAR VALUES!!!!!!!!
 
 function addWeight (entry) {
-  setLeftBar([(entry / 2), ...LeftBar ])
-  setRightBar([(entry / 2), ...RightBar, ])
-  console.log(LeftBar)
+  setLeftBar([...LeftBar, (entry / 2) ])
+  setRightBar([...RightBar, (entry / 2) ])
+ 
 
 
   setWeight(weight + entry)
