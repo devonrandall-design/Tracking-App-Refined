@@ -14,7 +14,7 @@ import Exercises from './exercise-list.js'
 export default function App() {
 
 function SelectExercise() {
-  return (<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  return (<svg onClick={() => noModalE('modal-show-e')} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.5 16.6H23.0667" stroke="#008CDD" stroke-width="3"/>
 <line x1="24.5667" y1="11" x2="24.5667" y2="22" stroke="#008CDD" stroke-width="3"/>
 <line x1="28" y1="13.9333" x2="28" y2="19.0667" stroke="#008CDD" stroke-width="2"/>
@@ -84,6 +84,7 @@ const [exerciseName, setExerciseName] = useState('Enter Exercise Name')
 const [newSet, setSet] = useState(1)
 const [distance, setDistance] = useState(70)
 const [error, setError] = useState('no-error')
+const [bodyType, setBodyType] = useState('Upper Body')
 
 
 
@@ -185,8 +186,9 @@ function Logging() {
   
   }
 
-  function test() {
-    console.log(LeftBar)
+  function handleChange(e) {
+    setBodyType(e.target.value);
+    console.log(e.target.value)
   }
   
 
@@ -255,7 +257,14 @@ function Logging() {
                 <p>{`There are not any ${selected / 2}lb weights on the bar`}</p>
                 </Warning>
 
-                <Exercises />
+                <Exercises modal={modalE} changeModal={noModalE} bodyType={bodyType}>
+                  <select onChange={handleChange} name="Exercise Type" >
+                    <option value="Upper Body">Upper Body</option>
+                      <option value="Lower Body">Lower Body</option>
+                        </select>
+
+
+                  </Exercises>
 
                 
 
