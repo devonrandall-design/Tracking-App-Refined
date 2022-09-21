@@ -14,11 +14,11 @@ const dynamicdistance = [80, 95, 110, 125, 140, 155, 170, 185, 200, 215, 230, 24
 {
 leftbar.map((bar, index) => { 
   return  <>
-  <StyledPlate style={{transform: `translateX(-${dynamicdistance[index]}px)`}} bar={bar}  />
+  <StyledPlate style={{transform: `translateX(-${dynamicdistance[index]}px)`}} bar={bar} id={'left' + index}  />
   </>})}
       <div className="clamp left"></div>
       <div className="clamp right"></div>
-{rightbar.map((bar, index) => { return <><StyledPlate style={{transform: `translateX(${dynamicdistance[index]}px)`}} bar={bar}  /></>})}
+{rightbar.map((bar, index) => { return <><StyledPlate style={{transform: `translateX(${dynamicdistance[index]}px)`}} bar={bar} id={'right' + index}  /></>})}
     </div>
   </div>
 }
