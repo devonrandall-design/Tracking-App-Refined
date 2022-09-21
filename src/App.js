@@ -80,7 +80,7 @@ const [modal, noModal] = useState('modal')
 const [modalE, noModalE] = useState('modal-e')
 const [overlay, setOverlay] = useState('no-overlay')
 const [warning, setWarning] = useState('no-warning')
-const [exerciseName, setExerciseName] = useState('Enter Exercise Name')
+const [exerciseName, setExerciseName] = useState('Bench Press')
 const [newSet, setSet] = useState(1)
 const [distance, setDistance] = useState(70)
 const [error, setError] = useState('no-error')
@@ -233,7 +233,10 @@ function Logging() {
           <button onClick={() => addReps()} className="activeround">+</button>
           </div>
         <div className="log-set-container">
-          <div className="log-set-sm"><SelectExercise /></div>
+          <div className="log-set-sm"><SelectExercise />
+          <button className="view" onClick={() => noModalE(modalE === 'modal-e' ? 'modal-show-e' : 'modal-e')}>
+         
+          Select Exercise</button></div>
           <div className="log-set-lg">
         <button onClick={repCount > 0 ? () => Logging() : null} className={repCount < 1 ? 'inactive' : 'btn'}>Log Set</button>
         </div>
@@ -257,7 +260,7 @@ function Logging() {
                 <p>{`There are not any ${selected / 2}lb weights on the bar`}</p>
                 </Warning>
 
-                <Exercises modal={modalE} changeModal={noModalE} bodyType={bodyType}>
+                <Exercises newSet={setSet} exerciseName={exerciseName} changeExercise={setExerciseName} modal={modalE} changeModal={noModalE} bodyType={bodyType}>
                   <select onChange={handleChange} name="Exercise Type" >
                     <option value="Upper Body">Upper Body</option>
                       <option value="Lower Body">Lower Body</option>
