@@ -461,12 +461,12 @@ border-radius: 30px;
         text-align: center;
       }
 
-     .modal-header-e-right button {
+     .modal-header-right button {
         border: 1px solid white;
         color: #FFFFFF;
-        cursor: alias;
+        cursor: pointer;
         font-size: 20px;
-        background-color: #0a0b0c;
+        background-color: none;
       }
 
       .log-area {
