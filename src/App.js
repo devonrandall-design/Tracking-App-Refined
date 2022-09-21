@@ -73,6 +73,9 @@ function selectWeight(plate) {
 //ALSO SETTING BAR VALUES!!!!!!!!
 
 function addWeight (entry) {
+  if ( selected === 0) {
+    return
+  }
   setLeftBar([...LeftBar, (entry / 2) ])
   setRightBar([...RightBar, (entry / 2) ])
  

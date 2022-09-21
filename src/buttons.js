@@ -7,7 +7,7 @@ export default function Buttons({selected, addWeight, subtractWeight, weight, le
   <div onClick={() => subtractWeight(selected)} 
   className={weight === 45 ? 'inactive' : 'btn'}>- Subtract</div>
   <div onClick={() => addWeight(selected)} className="btn"
-  className={weight === 1300 ? 'inactive' : 'btn'}>+ Add </div>
+  className={weight === 1300 || weight === 45 ? 'inactive' : 'btn'}>+ Add </div>
   </>
   )
 }
