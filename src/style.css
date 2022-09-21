@@ -135,11 +135,11 @@ align-items:center;
 }
 
 .left {
-  transform: translateX(-60px);
+  transform: translateX(-50px);
 }
 
 .right {
-  transform: translateX(60px);
+  transform: translateX(50px);
 }
 
 .plate-45 {

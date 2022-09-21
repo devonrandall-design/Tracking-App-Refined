@@ -5,7 +5,7 @@ export default function Barbell({leftbar, rightbar, distance, changeDistance, er
 
 const leftCheck = leftbar.length;
 
-const dynamicdistance = [80, 95, 110, 125, 140, 155, 170, 185, 200, 215, 230, 245]
+const dynamicdistance = [68, 80, 92, 104, 116, 128, 140, 152, 164, 176, 188, 200]
 
 
 
