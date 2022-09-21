@@ -143,31 +143,28 @@ align-items:center;
 }
 
 .plate-45 {
-width: 8px;
-height: 120px;
+
+
 background-color: #3BCEAC;
 position:absolute;
 border-radius: 30px;
 }
 
 .plate-35 {
-  width: 8px;
-  height: 100px;
+ 
+
   background-color: #3BCEAC;
   position:absolute;
   border-radius: 30px;
   }
 
   .plate-25 {
-    width: 7px;
-    height: 75px;
+
     background-color: #3BCEAC;
     position:absolute;
     border-radius: 30px;
     }
     .plate-10 {
-      width: 5px;
-      height: 55px;
       background-color: #3BCEAC;
       position:absolute;
       border-radius: 30px;
