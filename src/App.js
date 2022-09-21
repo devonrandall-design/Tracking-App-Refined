@@ -9,6 +9,7 @@ import Modal from './modal.js'
 import Log from './log-area.js'
 import Warning from './warning-modal.js'
 import StyledPlate from './plate-image.js'
+import Exercises from './exercise-list.js'
 
 export default function App() {
 
@@ -76,6 +77,7 @@ const [another, setAnother] = useState(false)
 const [repCount, setRepCount] = useState(0)
 const [workoutLog, addLog] = useState([])
 const [modal, noModal] = useState('modal')
+const [modalE, noModalE] = useState('modal-e')
 const [overlay, setOverlay] = useState('no-overlay')
 const [warning, setWarning] = useState('no-warning')
 const [exerciseName, setExerciseName] = useState('Enter Exercise Name')
@@ -252,6 +254,10 @@ function Logging() {
               <Warning warningClass={warning}>
                 <p>{`There are not any ${selected / 2}lb weights on the bar`}</p>
                 </Warning>
+
+                <Exercises />
+
+                
 
       
     </div>

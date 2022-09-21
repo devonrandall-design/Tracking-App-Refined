@@ -1,0 +1,55 @@
+import React from 'react'
+
+export default function Exercises({children}) {
+
+  
+  function Close() {
+    return (
+      <svg onClick={() => changeModal('modal') } width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_55_42)">
+<path d="M31.6666 10.6833L29.3166 8.33333L20 17.65L10.6833 8.33333L8.33331 10.6833L17.65 20L8.33331 29.3167L10.6833 31.6667L20 22.35L29.3166 31.6667L31.6666 29.3167L22.35 20L31.6666 10.6833Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_55_42">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+    )
+  }
+
+const list = {
+  UpperBody: {
+BenchPress: 'Bench Press',
+ShoulderPress: 'Shoulder Press',
+BarbellCurl: 'Barbell Curl',
+BarbellRow: 'Barbell Row',
+Deadlift: 'Deadlift',
+  },
+  LowerBody: {
+    Squat: 'Squat',
+    RDL: 'Romanian Deadlift',
+    SumoDeadlift: 'Sumo Deadlift',
+    BarbellLunges: 'Lunges',
+    HipThrust: 'Hip Thrust',
+
+  }
+}
+
+return ( <div className="modal-show-e">
+<div className="modal-header-e">
+  <div className="modal-header-left">
+      <h2>Select Exercise</h2>
+      </div>
+      <div className="modal-header-right">
+      <button onClick={() => changeModal('modal') }><Close /></button>
+      </div>
+    </div>
+    {children}
+
+</div>
+)
+
+
+}
