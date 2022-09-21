@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Modal({modal, changeModal, children}) {
+export default function Modal({themodal, changingModal, children}) {
 
   function Close() {
     return (
@@ -17,13 +17,13 @@ export default function Modal({modal, changeModal, children}) {
     )
   }
   return (
-  <div className={modal}>
+  <div className={themodal}>
     <div className="modal-header">
     <div className="modal-header-left">
       <h2>Workout Log</h2>
       </div>
       <div className="modal-header-right">
-      <button onMouseDown={() => changeModal('modal')} onClick={() => changeModal('modal')}>Close</button>
+      <button onMouseDown={() => changingModal('modal')} onClick={() => changingModal('modal')}><Close/></button>
       </div>
     </div>
       

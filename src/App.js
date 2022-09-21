@@ -249,7 +249,7 @@ function Logging() {
         
          
 
-            <Modal changeModal={noModal} modal={modal}>
+            <Modal changingModal={noModal} themodal={modal}>
 <Log currentLog={workoutLog} />
               </Modal>
             <div className={overlay}>
