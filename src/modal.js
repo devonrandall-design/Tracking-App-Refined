@@ -23,7 +23,7 @@ export default function Modal({modal, changeModal, children}) {
       <h2>Workout Log</h2>
       </div>
       <div className="modal-header-right">
-      <button onClick={() => changeModal('modal')}><Close key={2}/></button>
+      <button onTouchStart={() => changeModal('modal')} onClick={() => changeModal('modal')}><Close key={2}/></button>
       </div>
     </div>
       
