@@ -14,7 +14,6 @@ export default function Modal({modal, changeModal, children}) {
 </clipPath>
 </defs>
 </svg>
-
     )
   }
   return (
@@ -27,7 +26,16 @@ export default function Modal({modal, changeModal, children}) {
       <button onClick={() => changeModal('modal') }><Close /></button>
       </div>
     </div>
+      
     {children}
   </div>
   )
 }
+
+/* 
+
+<button onClick={() => changeModal('modal') }>X</button>
+      </div>
+    </div>
+
+*/

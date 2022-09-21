@@ -461,15 +461,11 @@ border-radius: 30px;
 
       .modal-header button {
         background: none;
-        border-radius: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;;
+        border: none;
         color: #FFFFFF;
-        font-size: 20px;
         width: 30px;
         height: 30px;
-        border: 1px solid white;
+  
       }
 
       .log-area {
@@ -489,7 +485,6 @@ border-radius: 30px;
         max-width: 500px;
         height: auto;
         flex-direction: column;
-        align-items: center;
         overflow-y: auto;
         padding: 40px;
       }
@@ -504,15 +499,12 @@ border-radius: 30px;
       .table-row {
        display: flex;
        justify-content: center;
-       align-items: center; 
        width: 100%;
       }
 
       .table-column {
         min-height: 30px;
         display: flex;
-        justify-content: center;
-        align-items: center;
         border-collapse: collapse;
       }
 
@@ -531,7 +523,8 @@ border-radius: 30px;
         color: #FFFFFF;
         font-size: 16px;
         font-family: 'Proxima Nova', sans-serif;
-        text-align: center;;
+        text-align: center;
+        min-width: 80px;
       }
 
       .header-item {
