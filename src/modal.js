@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Modal({modal, changeModal, children}) {
 
-  function newX() {
+  function Close() {
     return (
       <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_55_42)">
@@ -23,7 +23,7 @@ export default function Modal({modal, changeModal, children}) {
       <h2>Workout Log</h2>
       </div>
       <div className="modal-header-right">
-      <button onClick={() => changeModal('modal')}>Close</button>
+      <button onClick={() => changeModal('modal')}><Close key={2}/></button>
       </div>
     </div>
       
