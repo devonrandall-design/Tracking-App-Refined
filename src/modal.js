@@ -18,7 +18,7 @@ export default function Modal({themodal, changingModal, children}) {
   }
   return (
   <div className={themodal}>
-    <div className="modal-header">
+    <div className="modal-header-e">
     <div className="modal-header-left">
       <h2>Workout Log</h2>
       </div>
