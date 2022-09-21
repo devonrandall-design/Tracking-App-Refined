@@ -462,6 +462,7 @@ border-radius: 30px;
       }
 
       .modal-header button {
+        cursor: pointer;
         background: none;
         border: none;
         color: #FFFFFF;
