@@ -20,8 +20,12 @@ export default function Modal({modal, changeModal, children}) {
   return (
   <div className={modal}>
     <div className="modal-header">
+    <div className="modal-header-left">
       <h2>Workout Log</h2>
+      </div>
+      <div className="modal-header-right">
       <button onClick={() => changeModal('modal') }><Close /></button>
+      </div>
     </div>
     {children}
   </div>
