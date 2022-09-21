@@ -109,12 +109,14 @@ setWarning('no-warning')
 }
 // console.log(checkingLeft)
   //FIND INDEX 
-const leftIndex = LeftBar.findIndex(plate => plate === (entry / 2))
-LeftBar.splice(leftIndex, 1)
+const lastleftIndex = LeftBar.lastIndexOf(selected / 2)
+//const leftIndex = LeftBar.findIndex(plate => plate === (entry / 2))
+LeftBar.splice(lastleftIndex, 1)
 setLeftBar(LeftBar)
 
-const rightIndex = RightBar.findIndex(plate => plate === (entry / 2))
-RightBar.splice(leftIndex, 1)
+const lastrightIndex = RightBar.lastIndexOf(selected / 2)
+//const rightIndex = RightBar.findIndex(plate => plate === (entry / 2))
+RightBar.splice(lastrightIndex, 1)
 setRightBar(RightBar)
 
 
