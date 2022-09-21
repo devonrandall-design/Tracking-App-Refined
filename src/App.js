@@ -12,6 +12,32 @@ import StyledPlate from './plate-image.js'
 
 export default function App() {
 
+function SelectExercise() {
+  return (<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 16.6H23.0667" stroke="#008CDD" stroke-width="3"/>
+<line x1="24.5667" y1="11" x2="24.5667" y2="22" stroke="#008CDD" stroke-width="3"/>
+<line x1="28" y1="13.9333" x2="28" y2="19.0667" stroke="#008CDD" stroke-width="2"/>
+<line x1="5" y1="13.9333" x2="5" y2="19.0667" stroke="#008CDD" stroke-width="2"/>
+<line x1="8.43335" y1="11" x2="8.43335" y2="22" stroke="#008CDD" stroke-width="3"/>
+</svg>
+  )
+
+}
+function ArticleButton() {
+  return ( <svg width="28" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_55_27)">
+  <path d="M25.3333 6.66667V25.3333H6.66667V6.66667H25.3333ZM25.3333 4H6.66667C5.2 4 4 5.2 4 6.66667V25.3333C4 26.8 5.2 28 6.66667 28H25.3333C26.8 28 28 26.8 28 25.3333V6.66667C28 5.2 26.8 4 25.3333 4Z" fill="#008CDD"/>
+  <path d="M18.6666 22.6667H9.33331V20H18.6666V22.6667ZM22.6666 17.3333H9.33331V14.6667H22.6666V17.3333ZM22.6666 12H9.33331V9.33333H22.6666V12Z" fill="#008CDD"/>
+  </g>
+  <defs>
+  <clipPath id="clip0_55_27">
+  <rect width="32" height="32" fill="white"/>
+  </clipPath>
+  </defs>
+  </svg>
+)  
+}
+
 
 class WorkoutLog {
 constructor(name, set, weight, reps) {
@@ -203,8 +229,17 @@ function Logging() {
           <button onClick={() => addReps()} className="activeround">+</button>
           </div>
         <div className="log-set-container">
+          <div className="log-set-sm"><SelectExercise /></div>
+          <div className="log-set-lg">
         <button onClick={repCount > 0 ? () => Logging() : null} className={repCount < 1 ? 'inactive' : 'btn'}>Log Set</button>
+        </div>
+        <div className="log-set-sm">
+        <ArticleButton />
+          <button className="view" onClick={() => noModal(modal === 'modal' ? 'modal-show' : 'modal')}>
+         
+          View Log</button></div>
           </div>
+        
          
 
             <Modal changeModal={noModal} modal={modal}>
