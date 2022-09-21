@@ -460,12 +460,13 @@ border-radius: 30px;
         font-size: 25px;
         text-align: center;
       }
-      .modal-header-right button {
-        background: none;
-        border: none;
+
+     .modal-header-e-right button {
+        border: 1px solid white;
         color: #FFFFFF;
+        cursor: alias;
         font-size: 20px;
-        right: 30px;
+        background-color: #0a0b0c;
       }
 
       .log-area {
@@ -761,11 +762,7 @@ border-radius: 30px;
         display: flex;
       }
 
-      .modal-header-right: {
-        width: 20%;
-        display: flex;
-      }
-
+     
       .modal-header-e h2 {
         color: #FFFFFF;
         font-family: 'Proxima Nova', sans-serif;
@@ -773,13 +770,6 @@ border-radius: 30px;
         text-align: center;
       }
 
-      .modal-header-e button {
-        background: none;
-        border: none;
-        color: #FFFFFF;
-        font-size: 20px;
-        right: 30px;
-      }
 
       .modal-e-body {
         width: 100%;
