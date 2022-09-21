@@ -16,8 +16,8 @@ leftbar.map((bar, index) => {
   return  <>
   <StyledPlate style={{transform: `translateX(-${dynamicdistance[index]}px)`}} bar={bar} id={'left' + index}  />
   </>})}
-      <div className="clamp left"></div>
-      <div className="clamp right"></div>
+      <div className="clamp left"><div className="clamp-styling"></div></div>
+      <div className="clamp right"><div className="clamp-styling"></div></div>
 {rightbar.map((bar, index) => { return <><StyledPlate style={{transform: `translateX(${dynamicdistance[index]}px)`}} bar={bar} id={'right' + index}  /></>})}
     </div>
   </div>
