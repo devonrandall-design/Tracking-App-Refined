@@ -822,6 +822,14 @@ border-radius: 30px;
         border: none;
         padding: 5px;     
       }
+
+      .being-dragged {
+opacity: 0;
+      }
+
+      .drag-hover {
+        opacity: 0.4;
+      }
   
   
 

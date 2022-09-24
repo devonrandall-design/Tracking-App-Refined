@@ -85,6 +85,7 @@ const [newSet, setSet] = useState(1)
 const [distance, setDistance] = useState(70)
 const [error, setError] = useState('no-error')
 const [bodyType, setBodyType] = useState('Upper Body')
+const [drag, setDrag] = useState('')
 
 
 
@@ -100,6 +101,23 @@ function selectWeight(plate) {
 
 //Adding and Subtracting Weight
 //ALSO SETTING BAR VALUES!!!!!!!!
+
+function addDrag(entry) {
+  if ( selected === 0) {
+    return
+  }
+  setLeftBar([...LeftBar, (entry / 2) ])
+  setRightBar([...RightBar, (entry / 2) ])
+ 
+
+
+  setWeight(weight + entry)
+  if (weight + entry > 1300) {
+    setWeight(1300) 
+    return
+  }
+
+}
 
 function addWeight (entry) {
   if ( selected === 0) {
@@ -208,12 +226,14 @@ function Logging() {
       <h1 className="headerAmount">{weight}</h1>
       <p className="label-sm">lbs</p>
       <Barbell 
+      dragAdd={dragAdd}
+      setDrag={setDrag}
       errorstate={error}
       distance={distance}
       changeDistance={setDistance}
-      weight={weight} leftbar={LeftBar} rightbar={RightBar} />
+      weight={weight} setWeight={setWeight} leftbar={LeftBar} rightbar={RightBar} selected={selected} />
       <PlateArea>
-{weightArray.map(weight => {return <Plate key={weight} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
+{weightArray.map(weight => {return <Plate drag={drag} setDrag={setDrag} key={weight} setCurrent={setSelected} current={selected} id={weight} selectedName={name} selectWeight={selectWeight} amount={weight} />})}
         </PlateArea>
         <div className="btn-Area">
           <Buttons 
